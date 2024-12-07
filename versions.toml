@@ -1,0 +1,22 @@
+# =============================================================================================
+[versions]
+# Project Dependencies
+common      = '0.0.1-SNAPSHOT'
+# External Dependencies
+lombok      = '1.18.34'
+spring-boot = '3.4.0'
+
+# =============================================================================================
+[libraries]
+# Project Dependencies
+common      = { module = 'game.bible:common', version.ref = 'common' }
+# External Dependencies
+lombok      = { module = 'org.projectlombok:lombok', version.ref = 'lombok' }
+
+# =============================================================================================
+[bundles]
+core        = ['common', 'lombok']
+
+# =============================================================================================
+[plugins]
+spring-boot = { id = 'org.springframework.boot', version.ref = 'spring-boot' }
