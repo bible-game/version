@@ -1,6 +1,6 @@
 plugins {
-	id("maven-publish")
-	id("version-catalog")
+	`version-catalog`
+	`maven-publish`
 }
 
 repositories {
@@ -10,6 +10,14 @@ repositories {
 
 catalog {
 	versionCatalog {
-		from(files("./versions.toml"))
+		from(files("./gradle/libs.versions.toml"))
+	}
+}
+
+publishing {
+	publications {
+		create<MavenPublication>("maven") {
+			from(components["versionCatalog"])
+		}
 	}
 }
