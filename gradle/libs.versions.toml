@@ -1,22 +1,65 @@
 # =============================================================================================
 [versions]
 # Project Dependencies
-common      = '0.0.1-SNAPSHOT'
+common                                           = '0.0.1-SNAPSHOT'
 # External Dependencies
-lombok      = '1.18.34'
-spring-boot = '3.4.0'
+groovy                                           = '4.0.18'
+h2                                               = '1.4.200'
+jackson-props                                    = '2.14.2'
+jackson-yaml                                     = '2.7.0'
+jakarta-annotations                              = '3.0.0'
+jakarta-servlet                                  = '6.0.0'
+jakarta-validation                               = '3.0.2'
+jvm-target                                       = 'JVM_21'
+kotlin-jackson                                   = '2.15.3'
+kotlin-jvm                                       = '1.9.22'
+kotlinx-serialization                            = '1.7.1'
+kotlin-version                                   = 'KOTLIN_1_9'
+lombok                                           = '1.18.34'
+serialization-plugin                             = '2.0.20'
+spock                                            = '2.4-M1-groovy-4.0'
+spring-boot                                      = '3.4.0'
+spring-dependency-management                     = '1.1.6'
 
 # =============================================================================================
 [libraries]
 # Project Dependencies
-common      = { module = 'game.bible:common', version.ref = 'common' }
+common                                           = { module = 'game.bible:common', version.ref = 'common' }
 # External Dependencies
-lombok      = { module = 'org.projectlombok:lombok', version.ref = 'lombok' }
+jackson-props                                    = { module = 'com.fasterxml.jackson.dataformat:jackson-dataformat-properties', version.ref = 'jackson-props' }
+jackson-yaml                                     = { module = 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml', version.ref = 'jackson-yaml' }
+jakarta-annotations                              = { module = 'jakarta.annotation:jakarta.annotation-api', version.ref = 'jakarta-annotations' }
+jakarta-servlet                                  = { module = 'jakarta.servlet:jakarta.servlet-api', version.ref = 'jakarta-servlet' }
+jakarta-validation                               = { module = 'jakarta.validation:jakarta.validation-api', version.ref = 'jakarta-validation' }
+kotlin-jackson                                   = { module = 'com.fasterxml.jackson.module:jackson-module-kotlin', version.ref = 'kotlin-jackson' }
+kotlin-reflect                                   = { module = 'org.jetbrains.kotlin:kotlin-reflect' }
+kotlin-runtime                                   = { module = 'org.jetbrains.kotlin:kotlin-script-runtime' }
+kotlinx-serialization                            = { module = 'org.jetbrains.kotlinx:kotlinx-serialization-json', version.ref = 'kotlinx-serialization' }
+lombok                                           = { module = 'org.projectlombok:lombok', version.ref = 'lombok' }
+spring-boot                                      = { module = 'org.springframework.boot:spring-boot', version.ref = 'spring-boot' }
+spring-boot-actuator                             = { module = 'org.springframework.boot:spring-boot-starter-actuator', version.ref = 'spring-boot' }
+spring-boot-data-jpa                             = { module = 'org.springframework.boot:spring-boot-starter-data-jpa', version.ref = 'spring-boot' }
+spring-boot-security                             = { module = 'org.springframework.boot:spring-boot-starter-security', version.ref = 'spring-boot' }
+spring-boot-web                                  = { module = 'org.springframework.boot:spring-boot-starter-web', version.ref = 'spring-boot' }
+test-groovy                                      = { module = 'org.apache.groovy:groovy', version.ref = 'groovy' }
+test-h2                                          = { module = 'com.h2database:h2', version.ref = 'h2' }
+test-spock-core                                  = { module = 'org.spockframework:spock-core', version.ref = 'spock' }
+test-spock-spring                                = { module = 'org.spockframework:spock-spring', version.ref = 'spock' }
+test-spring-boot                                 = { module = 'org.springframework.boot:spring-boot-starter-test', version.ref = 'spring-boot' }
 
 # =============================================================================================
 [bundles]
-core        = ['common', 'lombok']
+app                                              = ['common']
+core                                             = ['lombok']
+data                                             = ['spring-boot-data-jpa', 'jackson-props', 'jackson-yaml']
+kotlin                                           = ['kotlin-jackson', 'kotlin-reflect', 'kotlin-runtime', 'kotlinx-serialization']
+web                                              = ['spring-boot-web']
+spring                                           = ['spring-boot', 'spring-boot-actuator']
+test                                             = ['test-groovy', 'test-spock-core', 'test-h2', 'test-spock-spring', 'test-spring-boot']
+security                                         = ['spring-boot-security']
 
 # =============================================================================================
 [plugins]
-spring-boot = { id = 'org.springframework.boot', version.ref = 'spring-boot' }
+spring-boot                                      = { id = 'org.springframework.boot', version.ref = 'spring-boot' }
+spring-dependency-manager                        = { id = 'io.spring.dependency-management', version.ref = 'spring-dependency-management' }
+kotlin-serialization                             = { id = 'org.jetbrains.kotlin.plugin.serialization', version.ref = 'serialization-plugin' }
