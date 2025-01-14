@@ -2,9 +2,12 @@
 [versions]
 # Project Dependencies
 common                                           = '0.0.1-SNAPSHOT'
+config                                           = '0.0.1-SNAPSHOT'
 # External Dependencies
+apache-commons                                   = '3.17.0'
 groovy                                           = '4.0.18'
 h2                                               = '1.4.200'
+jackson-annotations                              = '2.18.2'
 jackson-props                                    = '2.14.2'
 jackson-yaml                                     = '2.7.0'
 jakarta-annotations                              = '3.0.0'
@@ -25,7 +28,10 @@ spring-dependency-management                     = '1.1.6'
 [libraries]
 # Project Dependencies
 common                                           = { module = 'game.bible:common', version.ref = 'common' }
+config                                           = { module = 'game.bible:config', version.ref = 'config' }
 # External Dependencies
+apache-commons                                   = { module = 'org.apache.commons:commons-lang3', version.ref = 'apache-commons' }
+jackson-annotations                              = { module = 'com.fasterxml.jackson.core:jackson-annotations', version.ref = 'jackson-annotations' }
 jackson-props                                    = { module = 'com.fasterxml.jackson.dataformat:jackson-dataformat-properties', version.ref = 'jackson-props' }
 jackson-yaml                                     = { module = 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml', version.ref = 'jackson-yaml' }
 jakarta-annotations                              = { module = 'jakarta.annotation:jakarta.annotation-api', version.ref = 'jakarta-annotations' }
@@ -49,9 +55,9 @@ test-spring-boot                                 = { module = 'org.springframewo
 
 # =============================================================================================
 [bundles]
-app                                              = ['common']
-core                                             = ['lombok']
-data                                             = ['spring-boot-data-jpa', 'jackson-props', 'jackson-yaml']
+app                                              = ['common', 'config']
+core                                             = ['lombok', 'apache-commons']
+data                                             = ['spring-boot-data-jpa', 'jackson-annotations', 'jackson-props', 'jackson-yaml']
 kotlin                                           = ['kotlin-jackson', 'kotlin-reflect', 'kotlin-runtime', 'kotlinx-serialization']
 web                                              = ['spring-boot-web']
 spring                                           = ['spring-boot', 'spring-boot-actuator']
