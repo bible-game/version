@@ -19,6 +19,7 @@ kotlin-jvm                                       = '1.9.22'
 kotlinx-serialization                            = '1.7.1'
 kotlin-version                                   = 'KOTLIN_1_9'
 lombok                                           = '1.18.34'
+postgres                                         = '42.7.4'
 serialization-plugin                             = '2.0.20'
 spock                                            = '2.4-M1-groovy-4.0'
 spring-boot                                      = '3.4.0'
@@ -42,6 +43,7 @@ kotlin-reflect                                   = { module = 'org.jetbrains.kot
 kotlin-runtime                                   = { module = 'org.jetbrains.kotlin:kotlin-script-runtime' }
 kotlinx-serialization                            = { module = 'org.jetbrains.kotlinx:kotlinx-serialization-json', version.ref = 'kotlinx-serialization' }
 lombok                                           = { module = 'org.projectlombok:lombok', version.ref = 'lombok' }
+postgres                                         = { module = 'org.postgresql:postgresql', version.ref = 'postgres' }
 spring-boot                                      = { module = 'org.springframework.boot:spring-boot', version.ref = 'spring-boot' }
 spring-boot-actuator                             = { module = 'org.springframework.boot:spring-boot-starter-actuator', version.ref = 'spring-boot' }
 spring-boot-data-jpa                             = { module = 'org.springframework.boot:spring-boot-starter-data-jpa', version.ref = 'spring-boot' }
@@ -58,6 +60,7 @@ test-spring-boot                                 = { module = 'org.springframewo
 app                                              = ['common', 'config']
 core                                             = ['lombok', 'apache-commons']
 data                                             = ['spring-boot-data-jpa', 'jackson-annotations', 'jackson-props', 'jackson-yaml']
+database                                         = ['postgres']
 kotlin                                           = ['kotlin-jackson', 'kotlin-reflect', 'kotlin-runtime', 'kotlinx-serialization']
 web                                              = ['spring-boot-web']
 spring                                           = ['spring-boot', 'spring-boot-actuator']
