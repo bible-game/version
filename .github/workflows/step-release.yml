@@ -22,11 +22,10 @@ jobs:
       - name: Tag 🏷️
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ./gradlew release
+        run: |
+          echo "VERSION=$(./gradlew -q printTagVersion)" >> $GITHUB_ENV
+          ./gradlew release
       - name: Release 📦
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.event.release.tag_name }}
-
-
-
+          tag_name: ${{ env.VERSION }}
