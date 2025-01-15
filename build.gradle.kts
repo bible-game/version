@@ -1,6 +1,7 @@
 plugins {
-	`version-catalog`
 	`maven-publish`
+	`version-catalog`
+	kotlin("jvm") version "2.1.0"
 	id("net.researchgate.release") version "3.0.2"
 }
 
