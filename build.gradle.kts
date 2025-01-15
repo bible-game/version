@@ -42,3 +42,9 @@ publishing {
 		}
 	}
 }
+
+tasks.register("printVersion") {
+	doLast {
+		println(project.version)
+	}
+}

@@ -19,10 +19,13 @@ jobs:
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-      - name: Release 🏷️
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Tag 🏷️
+        run: |
+          gradlew release -Pversion=$(./gradlew -q printVersion)
+          echo "VERSION=$(./gradlew -q printVersion)" >> $GITHUB_ENV
+      - name: Release 📦
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          tag_name: ${{ env.VERSION }}
+      - name: Snapshot  📷
+        run: ./gradlew release -x createReleaseTag
