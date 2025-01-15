@@ -9,10 +9,10 @@ jobs:
     permissions:
       packages: write
       contents: write
-    uses: ./.github/workflows/steps/step-release.yaml
+    uses: ./.github/workflows/step-release.yaml
   merge:
     needs: release
     name: merge
     permissions:
       contents: write
-    uses: ./.github/workflows/steps/step-merge.yaml
+    uses: ./.github/workflows/step-merge.yaml
