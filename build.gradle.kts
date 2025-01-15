@@ -42,3 +42,9 @@ publishing {
 		}
 	}
 }
+
+tasks.register("printTagVersion") {
+	doLast {
+		println(project.version.toString().split("-")[0])
+	}
+}
