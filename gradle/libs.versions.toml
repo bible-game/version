@@ -2,7 +2,7 @@
 [versions]
 # Project Dependencies
 common                                           = '0.0.2'
-config                                           = '0.0.2'
+config                                           = '0.1.0-SNAPSHOT'
 # External Dependencies
 apache-commons                                   = '3.17.0'
 groovy                                           = '4.0.18'
