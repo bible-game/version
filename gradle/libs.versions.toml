@@ -16,9 +16,11 @@ jakarta-validation                               = '3.0.2'
 jvm-target                                       = 'JVM_21'
 kotlin-jackson                                   = '2.15.3'
 kotlin-jvm                                       = '1.9.22'
+kotlin-logging                                   = '7.0.3'
 kotlinx-serialization                            = '1.7.1'
 kotlin-version                                   = 'KOTLIN_1_9'
 lombok                                           = '1.18.34'
+openai                                           = '0.18.1'
 postgres                                         = '42.7.4'
 serialization-plugin                             = '2.0.20'
 spock                                            = '2.4-M1-groovy-4.0'
@@ -39,10 +41,12 @@ jakarta-annotations                              = { module = 'jakarta.annotatio
 jakarta-servlet                                  = { module = 'jakarta.servlet:jakarta.servlet-api', version.ref = 'jakarta-servlet' }
 jakarta-validation                               = { module = 'jakarta.validation:jakarta.validation-api', version.ref = 'jakarta-validation' }
 kotlin-jackson                                   = { module = 'com.fasterxml.jackson.module:jackson-module-kotlin', version.ref = 'kotlin-jackson' }
+kotlin-logging                                   = { module = 'io.github.oshai:kotlin-logging-jvm', version.ref = 'kotlin-logging' }
 kotlin-reflect                                   = { module = 'org.jetbrains.kotlin:kotlin-reflect' }
 kotlin-runtime                                   = { module = 'org.jetbrains.kotlin:kotlin-script-runtime' }
 kotlinx-serialization                            = { module = 'org.jetbrains.kotlinx:kotlinx-serialization-json', version.ref = 'kotlinx-serialization' }
 lombok                                           = { module = 'org.projectlombok:lombok', version.ref = 'lombok' }
+openai                                           = { module = 'com.openai:openai-java', version.ref = 'openai' }
 postgres                                         = { module = 'org.postgresql:postgresql', version.ref = 'postgres' }
 spring-boot                                      = { module = 'org.springframework.boot:spring-boot', version.ref = 'spring-boot' }
 spring-boot-actuator                             = { module = 'org.springframework.boot:spring-boot-starter-actuator', version.ref = 'spring-boot' }
@@ -61,7 +65,8 @@ app                                              = ['common', 'config']
 core                                             = ['lombok', 'apache-commons']
 data                                             = ['spring-boot-data-jpa', 'jackson-annotations', 'jackson-props', 'jackson-yaml']
 database                                         = ['postgres']
-kotlin                                           = ['kotlin-jackson', 'kotlin-reflect', 'kotlin-runtime', 'kotlinx-serialization']
+integration                                      = ['openai']
+kotlin                                           = ['kotlin-jackson', 'kotlin-logging', 'kotlin-reflect', 'kotlin-runtime', 'kotlinx-serialization']
 web                                              = ['spring-boot-web']
 spring                                           = ['spring-boot', 'spring-boot-actuator']
 test                                             = ['test-groovy', 'test-spock-core', 'test-h2', 'test-spock-spring', 'test-spring-boot']
