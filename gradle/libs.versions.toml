@@ -56,7 +56,7 @@ spring-boot-actuator                             = { module = 'org.springframewo
 spring-boot-data-jpa                             = { module = 'org.springframework.boot:spring-boot-starter-data-jpa', version.ref = 'spring-boot' }
 spring-boot-security                             = { module = 'org.springframework.boot:spring-boot-starter-security', version.ref = 'spring-boot' }
 spring-boot-web                                  = { module = 'org.springframework.boot:spring-boot-starter-web', version.ref = 'spring-boot' }
-spring-gemini                                    = { module = 'org.springframework.ai:spring-ai-starter-model-vertex-ai-gemini', version.ref = 'spring-ai' }
+spring-ai-openai                                 = { module = 'spring-ai-starter-model-openai', version.ref = 'spring-ai' }
 test-groovy                                      = { module = 'org.apache.groovy:groovy', version.ref = 'groovy' }
 test-h2                                          = { module = 'com.h2database:h2', version.ref = 'h2' }
 test-spock-core                                  = { module = 'org.spockframework:spock-core', version.ref = 'spock' }
@@ -70,7 +70,7 @@ config                                           = ['config']
 core                                             = ['lombok', 'apache-commons']
 data                                             = ['spring-boot-data-jpa', 'jackson-annotations', 'jackson-props', 'jackson-yaml']
 database                                         = ['postgres']
-integration                                      = ['openai', 'spring-gemini']
+integration                                      = ['openai', 'spring-ai-openai']
 jwt                                              = ['jsonwebtoken']
 kotlin                                           = ['kotlin-jackson', 'kotlin-logging', 'kotlin-reflect', 'kotlin-runtime', 'kotlinx-serialization']
 web                                              = ['spring-boot-web']
