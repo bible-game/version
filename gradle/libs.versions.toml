@@ -5,6 +5,7 @@ common                                           = '0.1.2'
 config                                           = '0.3.1'
 # External Dependencies
 apache-commons                                   = '3.17.0'
+aws-sdk                                          = '2.31.77'
 groovy                                           = '4.0.18'
 h2                                               = '1.4.200'
 jackson-annotations                              = '2.18.2'
@@ -36,6 +37,7 @@ common                                           = { module = 'game.bible:common
 config                                           = { module = 'game.bible:config', version.ref = 'config' }
 # External Dependencies
 apache-commons                                   = { module = 'org.apache.commons:commons-lang3', version.ref = 'apache-commons' }
+aws-s3                                           = { module = 'software.amazon.awssdk:s3', version.ref = 'aws-sdk' }
 jackson-annotations                              = { module = 'com.fasterxml.jackson.core:jackson-annotations', version.ref = 'jackson-annotations' }
 jackson-props                                    = { module = 'com.fasterxml.jackson.dataformat:jackson-dataformat-properties', version.ref = 'jackson-props' }
 jackson-yaml                                     = { module = 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml', version.ref = 'jackson-yaml' }
@@ -71,7 +73,7 @@ config                                           = ['config']
 core                                             = ['lombok', 'apache-commons']
 data                                             = ['spring-boot-data-jpa', 'jackson-annotations', 'jackson-props', 'jackson-yaml']
 database                                         = ['postgres']
-integration                                      = ['openai', 'spring-ai-openai']
+integration                                      = ['aws-s3', 'openai', 'spring-ai-openai']
 jwt                                              = ['jsonwebtoken']
 kotlin                                           = ['kotlin-jackson', 'kotlin-logging', 'kotlin-reflect', 'kotlin-runtime', 'kotlinx-serialization']
 web                                              = ['spring-boot-web', 'spring-boot-webflux']
