@@ -1,7 +1,7 @@
 # =============================================================================================
 [versions]
 # Project Dependencies
-common                                           = '0.2.0'
+common                                           = '0.2.1'
 config                                           = '0.3.3'
 # External Dependencies
 apache-commons                                   = '3.17.0'
