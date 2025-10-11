@@ -56,6 +56,7 @@ postgres                                         = { module = 'org.postgresql:po
 spring-boot                                      = { module = 'org.springframework.boot:spring-boot', version.ref = 'spring-boot' }
 spring-boot-actuator                             = { module = 'org.springframework.boot:spring-boot-starter-actuator', version.ref = 'spring-boot' }
 spring-boot-data-jpa                             = { module = 'org.springframework.boot:spring-boot-starter-data-jpa', version.ref = 'spring-boot' }
+spring-boot-data-redis                           = { module = 'org.springframework.boot:spring-boot-starter-data-redis', version.ref = 'spring-boot' }
 spring-boot-security                             = { module = 'org.springframework.boot:spring-boot-starter-security', version.ref = 'spring-boot' }
 spring-boot-web                                  = { module = 'org.springframework.boot:spring-boot-starter-web', version.ref = 'spring-boot' }
 spring-boot-webflux                              = { module = 'org.springframework.boot:spring-boot-starter-webflux', version.ref = 'spring-boot' }
@@ -71,7 +72,7 @@ test-spring-boot                                 = { module = 'org.springframewo
 common                                           = ['common']
 config                                           = ['config']
 core                                             = ['lombok', 'apache-commons']
-data                                             = ['spring-boot-data-jpa', 'jackson-annotations', 'jackson-props', 'jackson-yaml']
+data                                             = ['spring-boot-data-jpa', 'spring-boot-data-redis', 'jackson-annotations', 'jackson-props', 'jackson-yaml']
 database                                         = ['postgres']
 integration                                      = ['aws-s3', 'openai', 'spring-ai-openai']
 jwt                                              = ['jsonwebtoken']
