@@ -22,7 +22,9 @@ kotlin-logging                                   = '7.0.3'
 kotlinx-serialization                            = '1.7.1'
 kotlin-version                                   = 'KOTLIN_1_9'
 lombok                                           = '1.18.34'
+mailjet-client                                   = '6.0.0'
 openai                                           = '0.18.1'
+okhttp-mock-web                                  = '5.3.2'
 postgres                                         = '42.7.4'
 serialization-plugin                             = '2.0.20'
 spock                                            = '2.4-M1-groovy-4.0'
@@ -51,6 +53,7 @@ kotlin-reflect                                   = { module = 'org.jetbrains.kot
 kotlin-runtime                                   = { module = 'org.jetbrains.kotlin:kotlin-script-runtime' }
 kotlinx-serialization                            = { module = 'org.jetbrains.kotlinx:kotlinx-serialization-json', version.ref = 'kotlinx-serialization' }
 lombok                                           = { module = 'org.projectlombok:lombok', version.ref = 'lombok' }
+mailjet-client                                   = { module = 'com.mailjet:mailjet-client', version.ref = 'mailjet-client' }
 openai                                           = { module = 'com.openai:openai-java', version.ref = 'openai' }
 postgres                                         = { module = 'org.postgresql:postgresql', version.ref = 'postgres' }
 spring-boot                                      = { module = 'org.springframework.boot:spring-boot', version.ref = 'spring-boot' }
@@ -63,6 +66,7 @@ spring-boot-webflux                              = { module = 'org.springframewo
 spring-ai-openai                                 = { module = 'org.springframework.ai:spring-ai-starter-model-openai', version.ref = 'spring-ai' }
 test-groovy                                      = { module = 'org.apache.groovy:groovy', version.ref = 'groovy' }
 test-h2                                          = { module = 'com.h2database:h2', version.ref = 'h2' }
+test-okhttp-mock-web                             = { module = 'com.squareup.okhttp3:mockwebserver', version.ref = 'okhttp-mock-web'}
 test-spock-core                                  = { module = 'org.spockframework:spock-core', version.ref = 'spock' }
 test-spock-spring                                = { module = 'org.spockframework:spock-spring', version.ref = 'spock' }
 test-spring-boot                                 = { module = 'org.springframework.boot:spring-boot-starter-test', version.ref = 'spring-boot' }
@@ -79,7 +83,7 @@ jwt                                              = ['jsonwebtoken']
 kotlin                                           = ['kotlin-jackson', 'kotlin-logging', 'kotlin-reflect', 'kotlin-runtime', 'kotlinx-serialization']
 web                                              = ['spring-boot-web', 'spring-boot-webflux']
 spring                                           = ['spring-boot', 'spring-boot-actuator']
-test                                             = ['test-groovy', 'test-spock-core', 'test-h2', 'test-spock-spring', 'test-spring-boot']
+test                                             = ['test-groovy', 'test-spock-core', 'test-h2', 'test-okhttp-mock-web', 'test-spock-spring', 'test-spring-boot']
 security                                         = ['spring-boot-security']
 
 # =============================================================================================
