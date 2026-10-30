@@ -2,7 +2,6 @@ plugins {
 	`maven-publish`
 	`version-catalog`
 	kotlin("jvm") version "2.1.0"
-	id("net.researchgate.release") version "3.0.2"
 }
 
 repositories {
@@ -18,10 +17,6 @@ catalog {
 
 tasks.getByName<Jar>("jar") {
 	enabled = true
-}
-
-release {
-	buildTasks.add("publish")
 }
 
 publishing {
